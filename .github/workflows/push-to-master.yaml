@@ -1,0 +1,17 @@
+name: "Change feedback"
+
+# Block feature branching from the repository, Change should only be allowed in the trunk aka master branch
+# Feedback should be triggered on code commit to master branch aka trunk base development
+# Run the unit test and integration test when the change is committed to trunk ,
+# find out if the feedback loop should be triggered when the code is committed to  trunk or code is pushed to trunk
+# If the feedback loop is executed on pushed to master directly  and test fail than rever the last commit done to master branch and noti
+# If the feedback loop is executed on commit to master aka step before code is pushed to trunk than reject the push aka git client hook and server hooks
+# and notify on failure
+# When should the migrations be executed
+# When should the infrastructure code applied
+# If the tests passed than trigger the deployment and notify
+# Find out how the release should work and notify about release on success and failure scenarios
+# Create a local git hook that triggers on git commit and fails commit if the tests are failing
+# Use gradle plugin and also git scripts to achieve this
+# Think about release toggles , experiment toggles , operations toggle
+# Think about constraint on change size that pushes for smaller working changess
